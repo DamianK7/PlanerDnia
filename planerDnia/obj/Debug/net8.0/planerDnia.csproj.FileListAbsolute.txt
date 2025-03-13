@@ -65,3 +65,4 @@ C:\Users\Damian\RiderProjects\planerDnia\planerDnia\obj\Debug\net8.0\refint\Aval
 C:\Users\Damian\RiderProjects\planerDnia\planerDnia\obj\Debug\net8.0\planerDnia.csproj.Up2Date
 C:\Users\Damian\RiderProjects\planerDnia\planerDnia\obj\Debug\net8.0\planerDnia.genruntimeconfig.cache
 C:\Users\Damian\RiderProjects\planerDnia\planerDnia\obj\Debug\net8.0\ref\planerDnia.dll
+C:\Users\Damian\RiderProjects\planerDnia\planerDnia\obj\Debug\net8.0\planerDnia.sourcelink.json

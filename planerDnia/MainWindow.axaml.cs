@@ -22,8 +22,16 @@ namespace planerDnia
 
         private void Zadanie_Button(object sender, RoutedEventArgs e)
         {
+            string tekstZadania = Zadanie.Text;
+            TextBlock.Text = tekstZadania;
+            TextBlockGrid.Text = tekstZadania;
+
+            TextBlock.Text = Zadanie.Text;
+            TextBlockGrid.Text = Zadanie.Text;
+            GridComboBox.SelectedIndex = ComboBox.SelectedIndex;
+
             var selectedComboBoxItem = ComboBox.SelectedItem as ComboBoxItem;
-            
+
             if (selectedComboBoxItem == null || string.IsNullOrEmpty(Zadanie.Text))
             {
                 TextBlock.Text = "Błąd: Wprowadź nazwę zadania i wybierz kategorię.";
@@ -34,9 +42,9 @@ namespace planerDnia
                 {
                     Nazwa = Zadanie.Text,
                     Kategoria = selectedComboBoxItem.Content.ToString(),
-                    CzyUkonczone = false
+                    CzyUkonczone = CheckBoxTask.IsChecked.GetValueOrDefault(),
                 };
-                
+
                 listaZadan.Add(noweZadanie);
                 DodajZadanie();
             }
@@ -47,7 +55,17 @@ namespace planerDnia
             TextBlock.Text = "Lista zadań:\n";
             foreach (var zadanie in listaZadan)
             {
-                TextBlock.Text += $"- {zadanie.Nazwa} ({zadanie.Kategoria})\n";
+                string status = zadanie.CzyUkonczone ? "Ukończono" : "Nie ukończono";
+                TextBlock.Text += $"- {zadanie.Nazwa} - {zadanie.Kategoria} - {status}\n";
+            }
+        }
+
+        private void DeleteButton_Click(object sender, RoutedEventArgs e)
+        {
+            if (listaZadan.Count > 0)
+            {
+                listaZadan.RemoveAt(listaZadan.Count - 1);
+                DodajZadanie();
             }
         }
     }
