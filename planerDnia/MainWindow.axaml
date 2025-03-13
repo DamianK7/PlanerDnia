@@ -1,0 +1,22 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="planerDnia.MainWindow"
+        Title="planerDnia">
+    
+        <StackPanel>
+                <TextBox x:Name="Zadanie" Width="200" Height="30" Watermark="Wpisz nazwę zadania..." Margin="10"/>
+                
+                        <ComboBox x:Name = "ComboBox" HorizontalAlignment="Center" Width="200" Height="30" Margin="10">
+                                <ComboBoxItem Content="Praca"/>
+                                <ComboBoxItem Content="Relaks"/>
+                                <ComboBoxItem Content="Zakupy"/>
+                        </ComboBox>
+                
+                        <Button x:Name="Button" Width="200" Height="30" HorizontalAlignment="Center" Content="Dodaj zadanie" Click="Zadanie_Button"/>
+                
+                        <TextBlock x:Name="TextBlock" HorizontalAlignment="Center" Margin="10"/>
+        </StackPanel>
+</Window>
