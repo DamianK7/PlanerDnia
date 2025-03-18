@@ -1,6 +1,8 @@
+using System;
 using Avalonia.Controls;
 using Avalonia.Interactivity;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace planerDnia
 {
@@ -46,6 +48,10 @@ namespace planerDnia
                 };
 
                 listaZadan.Add(noweZadanie);
+                
+                var listaUkonczonychZadan = listaZadan.Where(zadanie => zadanie.CzyUkonczone == true).ToList();
+                PodsumowanieTextBlock.Text = $"Wszystkie zadania {listaZadan.Count}, Zadania ukończone: {listaUkonczonychZadan.Count}";
+                
                 DodajZadanie();
             }
         }
@@ -66,6 +72,22 @@ namespace planerDnia
             {
                 listaZadan.RemoveAt(listaZadan.Count - 1);
                 DodajZadanie();
+            }
+        }
+
+        private void Zmien_Kategorie(object sender, RoutedEventArgs e)
+        {
+            if (GridComboBox.SelectedIndex != ComboBox.SelectedIndex)
+            {
+                foreach (var zadanieGrid in listaZadan)
+                {
+                    string status = zadanieGrid.CzyUkonczone ? "Ukończono" : "Nie ukończono";
+                    TextBlock.Text += $"- {zadanieGrid.Nazwa} - {zadanieGrid.Kategoria} - {status}\n";
+                }
+            }
+            else
+            {
+                TextBlock.Text += $"Błąd\n";
             }
         }
     }

@@ -42,7 +42,7 @@
                         <TextBlock Grid.Row ="0" Grid.Column="1" Margin="10"  Name="TextBlockGrid"/>
                 
                         <TextBlock Grid.Row="1" Grid.Column="0" Margin="10" Text="Edytuj kategorię" />
-                        <ComboBox Grid.Row ="1" Grid.Column="2" Margin="10" Name="GridComboBox" >
+                        <ComboBox Grid.Row ="1" Grid.Column="2" Margin="10" Name="GridComboBox" SelectionChanged="Zmien_Kategorie">
                                 <ComboBoxItem Content="Praca"/>
                                 <ComboBoxItem Content="Relaks"/>
                                 <ComboBoxItem Content="Zakupy"/>
@@ -58,7 +58,7 @@
                 <StackPanel>
                         
                         <TextBlock x:Name="TextBlock" HorizontalAlignment="Center" Margin="10"/>
-                        
+                        <TextBlock x:Name="PodsumowanieTextBlock" Margin="10" HorizontalAlignment="Center"></TextBlock>
                 </StackPanel>
         </StackPanel>
 </Window>
