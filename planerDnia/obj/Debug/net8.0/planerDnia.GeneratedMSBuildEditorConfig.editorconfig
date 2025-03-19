@@ -15,12 +15,12 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = planerDnia
-build_property.ProjectDir = /home/damian/RiderProjects/PlanerDnia/planerDnia/
+build_property.ProjectDir = C:\Users\Damian\RiderProjects\planerDnia\planerDnia\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 
-[/home/damian/RiderProjects/PlanerDnia/planerDnia/App.axaml]
+[C:/Users/Damian/RiderProjects/planerDnia/planerDnia/App.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
-[/home/damian/RiderProjects/PlanerDnia/planerDnia/MainWindow.axaml]
+[C:/Users/Damian/RiderProjects/planerDnia/planerDnia/MainWindow.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml

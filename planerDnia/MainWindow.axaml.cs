@@ -75,19 +75,21 @@ namespace planerDnia
             }
         }
 
-        private void Zmien_Kategorie(object sender, RoutedEventArgs e)
+        private void Zmien_Kategorie(object sender, SelectionChangedEventArgs e)
         {
-            if (GridComboBox.SelectedIndex != ComboBox.SelectedIndex)
+            if (listaZadan.Count > 0 && GridComboBox.SelectedItem is ComboBoxItem selectedGridItem)
             {
-                foreach (var zadanieGrid in listaZadan)
+                string nazwaZadania = TextBlockGrid.Text;
+
+                var zadanieDoEdycji = listaZadan.FirstOrDefault(z => z.Nazwa == nazwaZadania);
+
+                if (zadanieDoEdycji != null)
                 {
-                    string status = zadanieGrid.CzyUkonczone ? "Ukończono" : "Nie ukończono";
-                    TextBlock.Text += $"- {zadanieGrid.Nazwa} - {zadanieGrid.Kategoria} - {status}\n";
+
+                    zadanieDoEdycji.Kategoria = selectedGridItem.Content.ToString();
+
+                    DodajZadanie();
                 }
-            }
-            else
-            {
-                TextBlock.Text += $"Błąd\n";
             }
         }
     }

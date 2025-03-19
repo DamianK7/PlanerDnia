@@ -1,25 +1,28 @@
 {
   "format": 1,
   "restore": {
-    "/home/damian/RiderProjects/PlanerDnia/planerDnia/planerDnia.csproj": {}
+    "C:\\Users\\Damian\\RiderProjects\\planerDnia\\planerDnia\\planerDnia.csproj": {}
   },
   "projects": {
-    "/home/damian/RiderProjects/PlanerDnia/planerDnia/planerDnia.csproj": {
+    "C:\\Users\\Damian\\RiderProjects\\planerDnia\\planerDnia\\planerDnia.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/damian/RiderProjects/PlanerDnia/planerDnia/planerDnia.csproj",
+        "projectUniqueName": "C:\\Users\\Damian\\RiderProjects\\planerDnia\\planerDnia\\planerDnia.csproj",
         "projectName": "planerDnia",
-        "projectPath": "/home/damian/RiderProjects/PlanerDnia/planerDnia/planerDnia.csproj",
-        "packagesPath": "/home/damian/.nuget/packages/",
-        "outputPath": "/home/damian/RiderProjects/PlanerDnia/planerDnia/obj/",
+        "projectPath": "C:\\Users\\Damian\\RiderProjects\\planerDnia\\planerDnia\\planerDnia.csproj",
+        "packagesPath": "C:\\Users\\Damian\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Damian\\RiderProjects\\planerDnia\\planerDnia\\obj\\",
         "projectStyle": "PackageReference",
+        "UsingMicrosoftNETSdk": false,
         "configFilePaths": [
-          "/home/damian/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\Damian\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -32,6 +35,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -75,7 +83,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/8.0.114/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
